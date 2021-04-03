@@ -29,14 +29,14 @@
 #
 
 # Arduino source install directory and Arduino SDK version:
-#ARDUINO_INSTALL_DIR           =
+ARDUINO_INSTALL_DIR=/Applications/Arduino.app/Contents/Java
 
 # Directory used to build files in. It contains all the build files, from
 # object files to the final hex file:
-#BUILD_DIR                     =
+#BUILD_DIR=./bin
 
 # Programmer configuration:
-#UPLOAD_PORT                   =
+#UPLOAD_PORT=/dev/tty.USB0
 
 ############################################################################
 # Below here nothing should be changed.
@@ -76,6 +76,7 @@ space +=
 ARDUINO_VERSION = 164
 
 BUILD_DIR ?= bin
+
 
 AVRDUDE_PROGRAMMER = wiring
 UPLOAD_RATE = 115200
@@ -196,7 +197,7 @@ endif
 VPATHTEMP += $(ARDUINO_INSTALL_DIR)/hardware/arduino/avr/variants/mega
 
 # SPI library
-VPATHTEMP += $(ARDUINO_INSTALL_DIR)/hardware/arduino/avr/libraries/SPI
+VPATHTEMP += $(ARDUINO_INSTALL_DIR)/hardware/arduino/avr/libraries/SPI/src
 CXXSRC += SPI.cpp
 
 VPATHTEMP += .

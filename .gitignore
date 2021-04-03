@@ -9,3 +9,5 @@ bin/
 *.bak
 *.DS_Store
 *.idea
+*.hex
+*.elf
